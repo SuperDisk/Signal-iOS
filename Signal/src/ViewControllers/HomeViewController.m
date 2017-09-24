@@ -273,6 +273,8 @@ typedef NS_ENUM(NSInteger, CellState) { kArchiveState, kInboxState };
     }
 
     [self updateBarButtonItems];
+
+    [GifManager.sharedInstance test];
 }
 
 - (void)updateBarButtonItems
