@@ -607,6 +607,9 @@
 /* A label for generic attachments. */
 "GENERIC_ATTACHMENT_LABEL" = "Attachment";
 
+/* Title for the 'gif picker' dialog. */
+"GIF_PICKER_VIEW_TITLE" = "Gif Search";
+
 /* No comment provided by engineer. */
 "GROUP_AVATAR_CHANGED" = "Avatar changed. ";
 
@@ -1246,6 +1249,9 @@
 /* No comment provided by engineer. */
 "SECURE_SESSION_RESET" = "Secure session was reset.";
 
+/* Label for 'select gif to attach' action sheet button */
+"SELECT_GIF_BUTTON" = "Gif";
+
 /* No comment provided by engineer. */
 "SEND_AGAIN_BUTTON" = "Send Again";
 
@@ -1605,20 +1611,3 @@
 
 /* Info message embedding a {{time amount}}, see the *_TIME_AMOUNT strings for context. */
 "YOU_UPDATED_DISAPPEARING_MESSAGES_CONFIGURATION" = "You set disappearing message time to %@.";
-
-// Strings Copied in from JSQMessagesViewController
-
-
-"load_earlier_messages" = "Load Earlier Messages";
-
-"send" = "Send";
-
-"new_message" = "New Message";
-
-"text_message_accessibility_label" = "%@: %@";
-
-"media_message_accessibility_label" = "%@: media message";
-
-"accessory_button_accessibility_label" = "Share media";
-
-"new_message_received_accessibility_announcement" = "New message received";
