@@ -5,12 +5,15 @@
 import Foundation
 //import MediaPlayer
 
-class GifPickerViewController: OWSViewController
+class GifPickerViewController: OWSViewController, UISearchBarDelegate
 //, OWSAudioAttachmentPlayerDelegate
 {
     let TAG = "[GifPickerViewController]"
 
     // MARK: Properties
+
+    let searchBar: UISearchBar
+    let collectionView: UICollectionView
 
 //    let attachment: SignalAttachment
 //
@@ -30,12 +33,16 @@ class GifPickerViewController: OWSViewController
 
     @available(*, unavailable, message:"use attachment: constructor instead.")
     required init?(coder aDecoder: NSCoder) {
+        self.searchBar = UISearchBar()
+        self.collectionView = UICollectionView()
 //        self.attachment = SignalAttachment.empty()
         super.init(coder: aDecoder)
         owsFail("\(self.TAG) invalid constructor")
     }
 
     required init() {
+        self.searchBar = UISearchBar()
+        self.collectionView = UICollectionView()
 //        assert(!attachment.hasError)
 //        self.attachment = attachment
 //        self.successCompletion = successCompletion
@@ -61,7 +68,46 @@ class GifPickerViewController: OWSViewController
     // MARK: Views
 
     private func createViews() {
+//        @property (nonatomic, readonly) UISearchBar *searchBar;
 
+        view.backgroundColor = UIColor.white
+
+        // Search
+        searchBar.searchBarStyle = .minimal
+        searchBar.delegate = self
+        searchBar.placeholder = NSLocalizedString("GIF_VIEW_SEARCH_PLACEHOLDER_TEXT",
+                                                  comment:"Placeholder text for the search field in gif view")
+        searchBar.backgroundColor = UIColor.white
+        self.view.addSubview(searchBar)
+        searchBar.autoPinWidthToSuperview()
+        searchBar.autoPin(toTopLayoutGuideOf: self, withInset:0)
+//        [searchBar sizeToFit];
+
+//        _tableViewController = [OWSTableViewController new];
+//        _tableViewController.delegate = self;
+//        _tableViewController.tableViewStyle = UITableViewStylePlain;
+//        [self.view addSubview:self.tableViewController.view];
+//        [_tableViewController.view autoPinWidthToSuperview];
+//        
+//        [_tableViewController.view autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:contactsPermissionReminderView];
+//        [_tableViewController.view autoPinToBottomLayoutGuideOfViewController:self withInset:0];
+//        _tableViewController.tableView.tableHeaderView = searchBar;
+//        
+//        _noSignalContactsView = [self createNoSignalContactsView];
+//        self.noSignalContactsView.hidden = YES;
+//        [self.view addSubview:self.noSignalContactsView];
+//        [self.noSignalContactsView autoPinWidthToSuperview];
+//        [self.noSignalContactsView autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//        [self.noSignalContactsView autoPinToBottomLayoutGuideOfViewController:self withInset:0];
+//        
+//        UIRefreshControl *pullToRefreshView = [UIRefreshControl new];
+//        pullToRefreshView.tintColor = [UIColor grayColor];
+//        [pullToRefreshView addTarget:self
+//            action:@selector(pullToRefreshPerformed:)
+//            forControlEvents:UIControlEventValueChanged];
+//        [self.tableViewController.tableView insertSubview:pullToRefreshView atIndex:0];
+//        
+//        [self updateTableContents];
     }
 
 //    override func viewDidLoad() {
